@@ -58,6 +58,16 @@ rollButton.addEventListener('click', () => {
   }, 1000);
 });
 
+function addToHistory(dice1, dice2) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `Roll: ${dice1} + ${dice2} = ${dice1 + dice2}`;
+        historyList.prepend(listItem);
+
+        if (historyList.children.length > 5) {
+            historyList.removeChild(historyList.lastChild);
+        }
+    }
+
 function getDiceCharacter(num) {
   switch (num) {
     case 1: return '⚀';
