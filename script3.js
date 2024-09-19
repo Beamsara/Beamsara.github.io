@@ -1,6 +1,10 @@
 let favorSix = true;
 let favorOneTwo = false;
 
+document.addEventListener('DOMContentLoaded', () => {
+    const historyList = document.getElementById('history-list');
+    }
+
 document.getElementById('roll-button').addEventListener('contextmenu', (event) => {
   event.preventDefault(); // Prevent the default context menu
   favorSix = !favorSix; // Toggle favorSix
